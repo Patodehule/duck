@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/pato.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  <div id="app">
+
+  <div class="duck_proyects">
+    <figure v-for="todo in todos">
+      <img v-bind:src="todo.imagen">
+      <figure-caption>
+        <figure-title>
+          <h2>{{todo.titulo}}</h2>
+          <span>Branding</span>
+        </figure-title>
+      </caption>
+    </figure>
+  </div>
+
+  </div>
+  
+  <script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+      todos: [
+        { titulo: 'Meular', imagen: 'img/portfolio/meular.jpg' },
+        { titulo: 'Proyecto 2', imagen: 'img/portfolio/meular.jpg' },
+        { titulo: 'Proyecto 3', imagen: 'img/portfolio/meular.jpg' },
+      ]
+      }
+    })
+  </script>
+</body>
+</html>
